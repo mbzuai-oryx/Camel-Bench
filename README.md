@@ -75,8 +75,8 @@ If you use CAMEL-Bench in your research, please consider citing:
 - **Ines Riahi** - Aalto University
 - **Abduljalil Saif** - Aalto University
 - **Jorma Laaksonen** - Aalto University
-- **Fahad S. Khan** - Linköping University
-- **Salman Khan** - Australian National University
+- **Fahad S. Khan** - Mohamed bin Zayed University of AI, Linköping University
+- **Salman Khan** - Mohamed bin Zayed University of AI, Australian National University
 - **Rao M. Anwer** - Mohamed bin Zayed University of AI, Aalto University
 
 ## License
