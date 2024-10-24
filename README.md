@@ -1,8 +1,7 @@
-<div style="text-align: center;">
-    <img src="assets/icon3.png" width='200'>
+<div style="display: flex; align-items: center;">
+    <img src="assets/icon3.png" width="100" style="margin-right: 15px;">
+    <h1>CAMEL-Bench: A Comprehensive Arabic LMM Benchmark</h1>
 </div>
-
-# CAMEL-Bench: A Comprehensive Arabic LMM Benchmark
 
 
 
