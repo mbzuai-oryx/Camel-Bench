@@ -1,4 +1,7 @@
-![CAMEL-Bench Logo](assets/icon2.ico)
+<div style="text-align: center;">
+    <img src="assets/icon3.png" width='200'>
+</div>
+
 # CAMEL-Bench: A Comprehensive Arabic LMM Benchmark
 
 
