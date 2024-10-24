@@ -10,9 +10,7 @@
 
 CAMEL-Bench is a **Comprehensive Arabic LMM Benchmark** designed to evaluate and improve the capabilities of **Large Multimodal Models (LMMs)** in the Arabic language. Our benchmark aims to bridge the gap in multimodal model evaluation for Arabic, which represents a large population of over 400 million speakers worldwide.
 
-<p align="center">
-    <img src="assets/CAMEL-B.png" alt="CAMEL-Bench Diversity" width="80%" />
-</p>
+![CAMEL-Bench Diversity](assets/CAMEL-B.png)
 
 The benchmark includes **eight diverse domains** and **38 sub-domains** to rigorously assess the performance of LMMs in visual reasoning and understanding tasks. It comprises over **29K questions**, curated by native Arabic speakers, ensuring high-quality evaluation.
 
