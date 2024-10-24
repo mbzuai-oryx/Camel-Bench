@@ -38,6 +38,44 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        #pie-chart {
+            width: 400px;
+            height: 400px;
+        }
+        #image-container {
+            width: 100%;
+            height: 400px;
+        }
+        #image-container img {
+            max-width: 80%;
+            height: auto;
+        }
+        .chart-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+        .bar-chart {
+            width: 400px;
+            height: 300px;
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,8 +118,29 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>        
           </div> -->
+        <div class="is-size-5 publication-authors">               
+        <p>
+            Sara Ghaboura<sup style="color:#3399FF;">1*</sup>, 
+            Ahmed Heakl<sup style="color:#3399FF;">1*</sup>, 
+            Omkar Thawakar<sup style="color:#3399FF;">1</sup>, 
+            Ali Alharthi<sup style="color:#3399FF;">1</sup>, 
+            Ines Riahi<sup style="color:#4CB5AE;">2</sup>, 
+            Abduljalil Saif<sup style="color:#4CB5AE;">2</sup>, 
+            Jorma Laaksonen<sup style="color:#4CB5AE;">2</sup>, 
+            Fahad S. Khan<sup style="color:#3399FF;">1, </sup><sup style="color:#FF66B3;">3</sup>, 
+            Salman Khan<sup style="color:#3399FF;">1, </sup><sup style="color:#FFA280;">4</sup>, 
+            Rao M. Anwer<sup style="color:#3399FF;">1, </sup><sup style="color:#4CB5AE;">2</sup>
+        </p>
+        <p>
+            <sup style="color:#3399FF;">1</sup>Mohamed bin Zayed University of AI, 
+            <sup style="color:#4CB5AE;">2</sup>Aalto University, 
+            <sup style="color:#FF66B3;">3</sup>Linköping University, 
+            <sup style="color:#FFA280;">4</sup>Australian National University
+        </p>
+        </div>
+                        
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
@@ -156,6 +215,28 @@
         </div>
     </section>
 
+
+ <section class="section">
+    <div class="container is-max-desktop">
+        <!-- News -->
+        <div class="columns is-centered">
+            <div class="column is-full has-text-centered">
+                <h2 class="title is-3" style="display: inline-flex; align-items: center; justify-content: center;">
+                    <span class="icon" style="margin-right: 8px;">
+                        <img src="static/images/bell.png" alt="News Icon" style="width: 24px; height: 24px;">
+                    </span>
+                    News
+                </h2>
+                <p style="font-size: 18px;">
+                    <strong>[2024-10-24]</strong>: Our CAMEL-Bench is now available on <a href="https://huggingface.co/collections/ahmedheakl/camel-bench-670750f3998395452cd3b7b1">HuggingFace</a>. We welcome all contributions and look forward to your participation!
+
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+            
     <section class="section">
         <div class="container is-max-desktop">
             <!-- Abstract. -->
@@ -303,6 +384,82 @@
             </div>
     </section>
 
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Title -->
+        <h2 class="title is-3 has-text-centered">CAMEL-Bench Diversity</h2>
+
+        <!-- Columns for Image and Pie Chart -->
+        <div class="columns is-centered is-vcentered">
+            <!-- Image Column -->
+            <div class="column is-half has-text-centered">
+                <div id="image-container">
+                   
+                   <img src="static/images/CAMEL-B.png" alt="CAMEL-B Image" style="width: 100%; height: 380px; object-fit: cover;">
+
+                </div>
+            </div>
+            
+            <!-- Pie Chart Column -->
+            <div class="column is-half">
+                
+                <div id="pie-chart" style="width: 400px; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pie Chart Script -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+    // Pie Chart Data
+    var pieData = [{
+        values: [14251, 7931, 2820, 765, 1285, 506, 769, 709],
+        labels: [
+            'Multimodal Understanding and Reasoning',
+            'OCR and Document Understanding',
+            'Chart and Diagram Understanding',
+            'Video Understanding',
+            'Cultural Specific Understanding',
+            'Medical Imaging',
+            'Agricultural Image Understanding',
+            'Remote Sensing Understanding'
+        ],
+        type: 'pie',
+        marker: {
+            colors: [
+                '#FFEBF9', '#E6D3FF', '#E0EBFE', '#B9E6EA', '#E2FEDB', '#FFFFCF', '#FBDDB2', '#FBDFDA'
+            ],
+            line: {
+                color: ['#FF7E79', '#9437FF', '#0096FF', '#168E74', '#2A975A', '#FFC000', '#FF9300', '#FF7E79'],
+                width: 1
+            }
+        },
+        hoverinfo: 'label',
+        hoverlabel: {
+            bordercolor: '#808080',
+            font: {
+                color: 'black'
+            }
+        }
+    }];
+
+    // Adjust Layout to Remove Legend and Set Size
+    var pieLayout = {
+        height: 400,   // Adjust height to make the pie chart larger
+        width: 400,    // Adjust width to make the pie chart larger
+        showlegend: false,  // Hide the legend
+        margin: {
+            l: 20,  // Reduce left margin
+            r: 20,  // Reduce right margin
+            t: 20,  // Title margin
+            b: 20   // Reduce bottom margin
+        }
+    };
+
+    // Render Pie Chart
+    Plotly.newPlot('pie-chart', pieData, pieLayout);
+</script>
 
 
     <footer class="footer">
