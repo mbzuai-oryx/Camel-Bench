@@ -66,6 +66,9 @@ If you use CAMEL-Bench in your research, please consider citing:
 }
 ```
 
+## Contact
+- Ahmed Heakl: [ahmed.heakl@mbzuai.ac.ae](mailto:ahmed.heakl@mbzuai.ac.ae)
+
 ## Contributors
 
 - **Sara Ghaboura** - Mohamed bin Zayed University of AI
