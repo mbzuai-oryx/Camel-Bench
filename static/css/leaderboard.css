@@ -87,3 +87,8 @@ table#results.js-sort-14 tbody tr td:nth-child(15) {
     color: #C6011F
     /* color: #3457D5 */
 }
+
+#results td:nth-child(2),
+#results th:nth-child(2) {
+    width: 180px; /* Adjust this value as needed to make it wider */
+}
