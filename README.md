@@ -66,9 +66,6 @@ If you use CAMEL-Bench in your research, please consider citing:
 }
 ```
 
-## Contact
-- Ahmed Heakl: [ahmed.heakl@mbzuai.ac.ae](mailto:ahmed.heakl@mbzuai.ac.ae)
-
 ## Contributors
 
 - **Sara Ghaboura** - Mohamed bin Zayed University of AI
@@ -95,6 +92,7 @@ We welcome contributions to CAMEL-Bench! Just push a pull request or issue to ge
 [![GitHub stars](https://img.shields.io/github/stars/mbzuai-oryx/Camel-Bench?style=social)](https://github.com/mbzuai-oryx/Camel-Bench/stargazers)
 
 ## Contact
+- Ahmed Heakl: [ahmed.heakl@mbzuai.ac.ae](mailto:ahmed.heakl@mbzuai.ac.ae)
 
 For questions or suggestions, feel free to reach out to us on [GitHub Discussions](https://github.com/mbzuai-oryx/Camel-Bench/discussions).
 
