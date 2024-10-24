@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A Comprehensive Arabic LMM Benchmark">
+    <meta name="keywords" content="CAMEL, Benchmark, LMM">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CAMEL-Bench: A Comprehensive Arabic LMM Benchmark</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/leaderboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/icon3.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title is-bold">
+                            <img src="static/images/icon2.png" style="width:1em;vertical-align: middle" alt="Logo" />
+                            <span class="mmmu" style="vertical-align: middle">CAMEL-Bench</span>
+                        </h1>
+                        <h2 class="subtitle is-3 publication-subtitle">
+                            A Comprehensive Arabic LMM Benchmark
+                        </h2>
+                        <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2011.12948"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2011.12948"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/ahmedheakl/arabic-multimodal-bench"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/collections/ahmedheakl/camel-bench-670750f3998395452cd3b7b1"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon" style="font-size:18px">🤗</span>
+                                        <span>Dataset</span>
+                                    </a>
+                                </span>
+                                <!-- Leaderboard Link. -->
+                                <span class="link-block">
+                                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <p style="font-size:18px">🏆</p>
+                                        </span>
+                                        <span>Leaderboard</span>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop has-text-centered">
+            <img src="static/images/eval-samples-figure.png" alt="geometric reasoning">
+            <p><i>The proposed CAMEL-Bench covers eight diverse and challenging domains: multimodal understanding and
+                    reasoning, OCR and document understanding,
+                    chart and diagram understanding, video understanding,
+                    cultural-specific understanding, medical imaging understanding, agricultural image understanding,
+                    and remote
+                    sensing understanding in Arabic. CAMEL-Bench covers 38 sub-domains with over <b>29K</b> questions
+                    carefully
+                    curated by native Arabic speakers to rigorously evaluate
+                    essential skills desired in Arabic LMMs.</i>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Recent years have witnessed a significant interest in developing large multi-modal models
+                            (LMMs)
+                            capable of performing various visual reasoning and understanding tasks. This has led to the
+                            introduction
+                            of multiple LMM benchmarks to evaluate LMMs on different tasks. However, most existing LMM
+                            evaluation
+                            benchmarks are predominantly English-centric. In this work, we develop a comprehensive LMM
+                            evaluation
+                            benchmark for the Arabic language to represent a large population of over 400 million
+                            speakers.
+                        </p>
+                        <p>
+                            The proposed benchmark, named CAMEL-Bench, comprises eight diverse domains and 38
+                            sub-domains including,
+                            multi-image understanding, complex visual perception, handwritten document understanding,
+                            video understanding,
+                            medical imaging, plant diseases, and remote sensing-based land use understanding to evaluate
+                            broad scenario generalizability.
+                            Our CAMEL-Bench comprises around 29,036 questions that are filtered from a larger pool of
+                            samples, where the quality is
+                            manually verified by native speakers to ensure reliable model assessment. We conduct
+                            evaluations of both closed-source,
+                            including GPT-4 series, and open-source LMMs. Our analysis reveals the need for substantial
+                            improvement, especially among
+                            the best open-source models, with even the closed-source GPT-4o achieving an overall score
+                            of 62%. Our benchmark will be publicly released.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-full has-text-centered content">
+                    <h2 class="title is-3" id="leaderboard">Leaderboard on CAMEL-Bench</h2>
+                    <div class="content">
+                        <p class="mt-3">Performance comparison of different closed-and open-source LMMs on <img
+                                src="static/images/icon3.png" style="width:1.0em;vertical-align: middle" alt="Logo" />
+                            <span class="mathvista">CAMEL-Bench</span>.
+                        </p>
+                        <table class="js-sort-table" id="results">
+                            <tr>
+                                <td class="js-sort-number"><strong>#</strong></td>
+                                <td class="js-sort-number"><strong>Model</strong></td>
+                                <td class="js-sort-number"><strong>Source</strong></td>
+                                <td class="js-sort-number"><strong><u>ALL</u></strong></td>
+                                <td class="js-sort-number"><strong>MM Understand. & Reasoning</strong></td>
+                                <td class="js-sort-number"><strong>OCR & Document Understanding</strong></td>
+                                <td class="js-sort-number"><strong>Charts & Diagrams Understanding</strong></td>
+                                <td class="js-sort-number"><strong>Video Understanding</strong></td>
+                                <td class="js-sort-number"><strong>Cultural Specific Understanding</strong></td>
+                                <td class="js-sort-number"><strong>Medical Imaging</strong></td>
+                                <td class="js-sort-number"><strong>Agro Specific</strong></td>
+                                <td class="js-sort-number"><strong>Remote Sensing</strong></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><b class="best-score-text">GPT-4o 🥇</b></td>
+                                <td><a href="https://openai.com/index/hello-gpt-4o/" class="ext-link"
+                                        style="font-size: 16px;">Link</a></td>
+                                <td><b class="best-score-text">62.40</b></td>
+                                <td>57.90</td>
+                                <td>59.11</td>
+                                <td>73.57</td>
+                                <td>74.27</td>
+                                <td>80.86</td>
+                                <td>49.90</td>
+                                <td>80.75</td>
+                                <td>22.85</td>
+                            </tr>
+                            <td>2</td>
+                            <td><b class="best-score-text">GPT-4o-mini 🥈</b></td>
+                            <td><a href="https://deepmind.google/technologies/gemini/pro/" class="ext-link"
+                                    style="font-size: 16px;">Link</a></td>
+                            <td><b class="best-score-text">53.42</b></td>
+                            <td>48.82</td>
+                            <td>42.89</td>
+                            <td>64.98</td>
+                            <td>68.11</td>
+                            <td>65.92</td>
+                            <td>47.37</td>
+                            <td>79.58</td>
+                            <td>16.93</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><b class="best-score-text">Gemini-1.5-Pro 🥉</b></td>
+                                <td><a href="https://deepmind.google/technologies/gemini/pro/" class="ext-link"
+                                        style="font-size: 16px;">Link</a></td>
+                                <td><b class="best-score-text">44.06</b></td>
+                                <td>46.67</td>
+                                <td>36.59</td>
+                                <td>47.06</td>
+                                <td>42.94</td>
+                                <td>56.24</td>
+                                <td>33.77</td>
+                                <td>72.12</td>
+                                <td>17.07</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><b class="">Gemini-1.5-Flash</b></td>
+                                <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+                                        class="ext-link" style="font-size: 16px;">Link</a></td>
+                                <td><b class="">45.14</b></td>
+                                <td>45.58</td>
+                                <td>33.59</td>
+                                <td>48.25</td>
+                                <td>53.31</td>
+                                <td>46.54</td>
+                                <td>42.86</td>
+                                <td>76.06</td>
+                                <td>14.95</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><b class="">Qwen2-VL</b></td>
+                                <td><a href="https://arxiv.org/abs/2409.12191" class="ext-link"
+                                        style="font-size: 16px;">Link</a></td>
+                                <td><b class="">32.62</b></td>
+                                <td>40.59</td>
+                                <td>25.68</td>
+                                <td>27.83</td>
+                                <td>38.90</td>
+                                <td>34.27</td>
+                                <td>29.12</td>
+                                <td>52.02</td>
+                                <td>12.56</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a
+                            href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                            Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
