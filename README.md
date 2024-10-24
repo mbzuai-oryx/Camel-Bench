@@ -66,18 +66,6 @@ If you use CAMEL-Bench in your research, please consider citing:
 }
 ```
 
-## Contributors
-
-- **Sara Ghaboura** - Mohamed bin Zayed University of AI
-- **Ahmed Heakl** - Mohamed bin Zayed University of AI
-- **Omkar Thawakar** - Mohamed bin Zayed University of AI
-- **Ali Alharthi** - Mohamed bin Zayed University of AI
-- **Ines Riahi** - Aalto University
-- **Abduljalil Saif** - Aalto University
-- **Jorma Laaksonen** - Aalto University
-- **Fahad S. Khan** - Mohamed bin Zayed University of AI, Linköping University
-- **Salman Khan** - Mohamed bin Zayed University of AI, Australian National University
-- **Rao M. Anwer** - Mohamed bin Zayed University of AI, Aalto University
 
 ## License
 
