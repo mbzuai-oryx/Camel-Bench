@@ -66,7 +66,6 @@ If you use CAMEL-Bench in your research, please consider citing:
 }
 ```
 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
