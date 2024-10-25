@@ -61,7 +61,7 @@ If you use CAMEL-Bench in your research, please consider citing:
 @article{ghaboura2024camelbench,
   title={CAMEL-Bench: A Comprehensive Arabic LMM Benchmark},
   author={Sara Ghaboura, Ahmed Heakl, Omkar Thawakar, Ali Alharthi, Ines Riahi, Abduljalil Saif, Jorma Laaksonen, Fahad S. Khan, Salman Khan, Rao M. Anwer},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv preprint arXiv:2410.18976},
   year={2024}
 }
 ```
