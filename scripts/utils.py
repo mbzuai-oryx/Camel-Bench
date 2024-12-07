@@ -77,7 +77,7 @@ def mme_eval(pred: str, gt: str):
     pred = pred.strip()
     if pred == "صح":
         pred = 'نعم'
-    return pred == gt
+    return gt in pred
     
 def default_eval(pred: str, gt: str):
     pred = pred.strip()
@@ -143,7 +143,6 @@ def vizwiz_eval(pred: str, gt: str):
         _ = ast.literal_eval(gt)
         gt = gt.replace(" ", ", ")
         gt = ast.literal_eval(gt)
-        print(gt)
     except:
         gt = gt.strip()
     pred = pred.strip()
@@ -275,7 +274,7 @@ def our_options_to_str(options):
 def our_doc_to_text(doc):
     question_text = "سؤال:\n" + doc["question"].strip()
     options = our_options_to_str(doc["options"])
-    options_text = "\n".join(options) if options else ""
+    options_text = options
     formatted_question = f"{question_text}\n{options_text}"
     post_prompt = "\nأجب عن السؤال باستخدام حرف واحد من الخيارات المعطاة."
     formatted_question = f"{formatted_question}{post_prompt}"
@@ -442,7 +441,7 @@ def scienceqa_doc_to_text(doc):
     return f"{context}{question}\n{choices_str}{post_prompt}"
 
 def scienceqa_eval(pred, gt):
-    gt = arabic_letters[chr(ord('A') + gt)]
+    gt = arabic_letters[chr(ord('A') + int(gt))]
     return mcq_eval(pred, gt)
 
 def ocrisi_doc_to_text(doc):
@@ -471,11 +470,18 @@ def cer(pred, gt):
     
     return cer
 
+from fast_edit_distance import edit_distance
+def fastcer(pred, gt):
+    ed = edit_distance(pred, gt, max_ed=1000)
+    if len(pred) > len(gt):
+        return ed / len(pred)
+    return ed /len(gt)
+
 
 def ocrisi_eval(pred: str, gt: str):
     pred = pred.strip()
     gt = gt.strip()
-    return cer(pred, gt) <= 0.1
+    return fastcer(pred, gt) <= 0.3
 
 def evarest_doc_to_text(doc):
     return doc['question']
@@ -483,7 +489,7 @@ def evarest_doc_to_text(doc):
 def evarest_eval(pred: str, gt: str):
     pred = pred.strip()
     gt = gt.strip()
-    return cer(pred, gt) <= 0.1
+    return fastcer(pred, gt) <= 0.5
 
 def historicalbooks_doc_to_text(doc):
     return doc['question']
@@ -491,7 +497,7 @@ def historicalbooks_doc_to_text(doc):
 def historicalbooks_eval(pred: str, gt: str):
     pred = pred.strip()
     gt = gt.strip()
-    return cer(pred, gt) <= 0.4
+    return fastcer(pred, gt) <= 0.2
 
 def khatt_doc_to_text(doc):
     return doc['question']
@@ -499,7 +505,7 @@ def khatt_doc_to_text(doc):
 def khatt_eval(pred: str, gt: str):
     pred = pred.strip()
     gt = gt.strip()
-    return cer(pred, gt) <= 0.3
+    return fastcer(pred, gt) <= 0.3
 
 def patsocr_doc_to_text(doc):
     return doc['question']
@@ -507,7 +513,7 @@ def patsocr_doc_to_text(doc):
 def patsocr_eval(pred: str, gt: str):
     pred = pred.strip()
     gt = gt.strip()
-    return cer(pred, gt) <= 0.1
+    return fastcer(pred, gt) <= 0.5
 
 def arabicocr_doc_to_text(doc):
     return doc['question']
@@ -515,7 +521,7 @@ def arabicocr_doc_to_text(doc):
 def arabicocr_eval(pred: str, gt: str):
     pred = pred.strip()
     gt = gt.strip()
-    return cer(pred, gt) <= 0.4
+    return fastcer(pred, gt) <= 0.4
 
 
 def culturevideovqa_doc_to_text(doc):
@@ -544,3 +550,10 @@ def videomme_eval(pred, gt):
 def geochat_doc_to_text(doc):
     pre_prompt = "أجب على السؤال التالي بكلمة أو جملة.\n"
     return pre_prompt + doc['question']
+
+def muribench_doc_to_text(doc):
+    return doc['question']
+
+def muribench_eval(pred, gt):
+    return mcq_eval(pred, gt)
+
