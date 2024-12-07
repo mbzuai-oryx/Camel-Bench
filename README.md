@@ -3,7 +3,7 @@
 # CAMEL-Bench: A Comprehensive Arabic LMM Benchmark
 
 
-
+[![arXiv](https://img.shields.io/badge/arXiv-2410.18976-b31b1b)](https://arxiv.org/abs/2410.18976)
 [![GitHub issues](https://img.shields.io/github/issues/mbzuai-oryx/Camel-Bench)](https://github.com/mbzuai-oryx/Camel-Bench/issues) [![GitHub stars](https://img.shields.io/github/stars/mbzuai-oryx/Camel-Bench)](https://github.com/mbzuai-oryx/Camel-Bench/stargazers) [![GitHub license](https://img.shields.io/github/license/mbzuai-oryx/Camel-Bench)](https://github.com/mbzuai-oryx/Camel-Bench/blob/main/LICENSE) [![Dataset on HuggingFace](https://img.shields.io/badge/HuggingFace-Dataset-orange)](https://huggingface.co/collections/ahmedheakl/camel-bench-670750f3998395452cd3b7b1)
 
 ## Overview
