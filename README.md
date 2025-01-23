@@ -1,6 +1,6 @@
 <img src='assets/icon3.png' align="right" width="30%" />
 
-# CAMEL-Bench: A Comprehensive Arabic LMM Benchmark
+# CAMEL-Bench: A Comprehensive Arabic LMM Benchmark [NACCL 2025 🔥]
 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2410.18976-b31b1b)](https://arxiv.org/abs/2410.18976)
@@ -20,6 +20,11 @@ The benchmark includes **eight diverse domains** and **38 sub-domains** to rigor
 - **Over 29,000 Questions:** Carefully curated by native Arabic speakers to ensure quality and accuracy.
 - **Broad Scope:** Evaluates models in domains such as **medical imaging**, **cultural-specific understanding**, and **remote sensing**.
 - **Open and Closed Source Evaluation:** We provide a leaderboard featuring results from both closed-source models (e.g., GPT-4o) and open-source LMMs.
+
+## 📢 Latest Updates
+- **Oct 2024** 🔥 CAMEL-Bench in released on HuggingFace [CAMEL-Bench Dataset 🤗](https://huggingface.co/collections/ahmedheakl/camel-bench-670750f3998395452cd3b7b1).
+- **Jan 2025** 🔥🔥 CAMEL-Bench in accepted for NACCL 2025 conference.
+
 
 ## Leaderboard
 
