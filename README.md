@@ -1,6 +1,6 @@
 <img src='assets/icon3.png' align="right" width="30%" />
 
-# CAMEL-Bench: A Comprehensive Arabic LMM Benchmark <br> [NACCL 2025 🔥]
+# CAMEL-Bench: A Comprehensive Arabic LMM Benchmark <br> [NAACL 2025 🔥]
 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2410.18976-b31b1b)](https://arxiv.org/abs/2410.18976)
